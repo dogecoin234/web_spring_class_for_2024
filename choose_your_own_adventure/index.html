@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francesco | Choose Your Own Adventure Game</title>
+</head>
+<body>
+    <script>
+        function playGame() {
+        var enterBackrooms = confirm("You see the entrance of the backrooms, Do you want to go in?");
+        alert(enterBackrooms);
+        if (enterBackrooms == true) {
+            //we enter the backrooms
+            alert("You spawn in the backrooms and you find yourself very scared. You also hear some creepy noises.");
+
+            var backroomsChoice = prompt('You spawn in the backrooms and you are very scared.You can 1, wait as you are too scared 2, run away very fast while making a lot of noise or 3, enter through a small door. Do you chose option 1, 2, or 3?');
+            if (backroomsChoice == 1) {
+                alert("You keep waiting and die of thirst. Game over.");
+            } else if (backroomsChoice == 2) {
+                alert("You make too much noise, and while you are running fast and out of breath, the entity pops up right behind you. Game over.");
+            } else {
+                alert("That was a smart decision. You carefully walk throug the small door without making too much noise. Just a small creak from the door, and you hear an eerie sound. But you are safe..for now.");
+                var entityChoice = prompt("You are still waiting in a small room with a few pathways after the doorway. But the creaking eerie noise gets louder. Then, in the sliver of the door, you see a thin black stick. It is the entity. You can 1, fight him with your hands. 2, embrace your death and waii for him to kill you. or 3, run very fast as he is chasing you. Choose choices, fight, embrace, or run.");
+                if (entityChoice == "fight") {
+                    alert("You try to fight the entity and you last maybe 2 seconds. Nice try. Game over.");
+                } else if (entityChoice == "embrace") {
+                    alert("You simply embrace your death and wait for him to brutally kill you. Game over.");
+                } else {
+                    alert("You run as fast as you can. He reaches for you, but you just escape past his grasp. There is a horrible screeching sound as he dissapears for you slowly. Hopefully you won't meet him again!");
+                }
+                    var thirstyChoice = prompt('After all that running, you are severely dehydrated. And you are very sweaty as well. Do you 1, shrug it off. 2, drink you sweat. or 3, try to find water? Please type whatever, sweat, or water.');
+                    if (thirstyChoice == "whatever") {
+                        alert("You shrug it off and die of dehydration.");
+                    } else if (thirstyChoice == 'sweat') {
+                        alert("You drink your own sweat but it is salty. Now you die of dehydration, but faster!")
+                    } else {
+                        alert('You try to find water, and you find a refreshing bottle of...coconut water? You shrug it off and take it and it was very hydrating!!')
+                    }
+
+                }
+
+           
+            } else {
+                //we do not enter the backrooms
+                alert("Wow, that was the shortest game ever. Game over.");
+            }
+
+            var playAgain = confirm('Do you want to play again?');
+            if (playAgain == true) {
+                playGame();
+            } else {
+                alert("Thank you for playing!Goobbye!")
+            }
+        }
+            playGame();
+   
+        
+
+    </script>
+</body>
+</html>
